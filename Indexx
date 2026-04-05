@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Hub</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 40px 20px; }
+        h1 { color: #7d2ae8; text-transform: uppercase; letter-spacing: 2px; } /* Roxo Kings */
+        .container { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 30px; }
+        a { 
+            color: #fff; text-decoration: none; border: 2px solid #7d2ae8; 
+            padding: 15px; width: 100%; max-width: 300px; border-radius: 8px; 
+            font-weight: bold; transition: 0.3s;
+        }
+        a:hover { background-color: #7d2ae8; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>KINGS SIMULADORES</h1>
+    <p>Hub Oficial de Links</p>
+    <div class="container">
+        <a href="https://www.kingssimuladores.com.br">LOJA OFICIAL</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">WHATSAPP</a>
+    </div>
+</body>
+</html>

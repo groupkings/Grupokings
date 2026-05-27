@@ -3,269 +3,334 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pedais Simnet — Kings Simuladores | Load Cell Premium para Sim Racing</title>
-<meta name="description" content="Pedais Simnet com tecnologia load cell para máxima precisão no sim racing. Linha completa disponível na Kings Simuladores. Compatível com PC, PS5 e Xbox.">
+<title>Pedais Simnet SP Pro — Kings Simuladores | Load Cell 100kg com Haptic Feedback</title>
+<meta name="description" content="Pedais Simnet SP Pro com load cell de 100kg, 12-bit, haptic feedback e mais de 343 configurações de frenagem. Distribuição oficial Kings Simuladores no Brasil.">
 <meta name="theme-color" content="#0a0a0a">
-<meta property="og:title" content="Pedais Simnet — Kings Simuladores">
-<meta property="og:description" content="A linha completa de pedais Simnet com load cell brasileira de alta performance.">
+<meta property="og:title" content="Pedais Simnet SP Pro — Kings Simuladores">
+<meta property="og:description" content="Load cell 100kg, haptic feedback e construção em aço inox 3mm. Pedais Simnet com pronta entrega no Brasil pela Kings Simuladores.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#0a0a0a;
-    --dark:#111;
-    --card:#181818;
-    --card2:#1f1f1f;
-    --gold:#C9A84C;
+    --black:#070707;
+    --dark:#0e0e0e;
+    --card:#151515;
+    --card2:#1c1c1c;
+    --red:#E10E1A;          /* Simnet red */
+    --red-dark:#a8080f;
+    --gold:#C9A84C;         /* Kings gold */
     --gold2:#F0CC6E;
-    --gold-soft:rgba(201,168,76,.12);
+    --br-green:#2A8F4F;     /* Brasil green accent (subtle) */
+    --br-yellow:#F4C430;
     --white:#F5F5F0;
-    --muted:#888;
+    --muted:#7a7a7a;
     --muted2:#bbb;
-    --accent:#E8002D;
-    --border:#262626;
-    --radius:10px;
+    --border:#222;
+    --radius:6px;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     background:var(--black);
     color:var(--white);
-    font-family:'Barlow',sans-serif;
+    font-family:'Inter',sans-serif;
     font-weight:400;
     line-height:1.6;
     overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
-  .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .container{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+  /* === BRAZIL STRIP === */
+  .br-strip{
+    background:var(--black);
+    border-bottom:1px solid #1a1a1a;
+    padding:8px 0;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted2);
+    display:flex;align-items:center;justify-content:center;gap:14px;
+  }
+  .br-strip .flag{
+    display:inline-flex;align-items:center;gap:4px;
+  }
+  .br-strip .flag::before{
+    content:'';width:14px;height:10px;
+    background:
+      linear-gradient(transparent 40%,#fff 40% 60%,transparent 60%),
+      linear-gradient(45deg,transparent 30%,var(--br-yellow) 30% 70%,transparent 70%),
+      var(--br-green);
+    border-radius:1px;
+  }
 
   /* === HEADER === */
   header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(10,10,10,.85);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
+    position:sticky;top:0;z-index:100;
+    background:rgba(7,7,7,.92);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--border);
   }
   .nav{
     display:flex;align-items:center;justify-content:space-between;
-    padding:16px 24px;max-width:1200px;margin:0 auto;
+    padding:18px 24px;max-width:1240px;margin:0 auto;
   }
   .logo{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:22px;letter-spacing:3px;color:var(--white);
+    display:flex;align-items:center;gap:12px;
+    font-family:'Oswald',sans-serif;
+    font-size:22px;font-weight:700;letter-spacing:1px;
+    color:var(--white);text-transform:uppercase;
   }
-  .logo span{color:var(--gold);}
-  .nav-links{display:flex;gap:28px;list-style:none;}
+  .logo-mark{
+    width:36px;height:36px;border-radius:5px;
+    background:var(--red);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Oswald',sans-serif;font-size:18px;
+    color:#fff;font-weight:700;
+    box-shadow:0 4px 12px rgba(225,14,26,.35);
+  }
+  .logo .x{color:var(--muted);font-weight:300;margin:0 2px;}
+  .logo .kings{color:var(--gold);}
+  .nav-links{display:flex;gap:32px;list-style:none;}
   .nav-links a{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:13px;font-weight:700;letter-spacing:2px;
+    font-size:14px;font-weight:700;letter-spacing:2px;
     text-transform:uppercase;color:var(--muted2);
-    transition:color .2s;
+    transition:color .2s;position:relative;
   }
-  .nav-links a:hover{color:var(--gold);}
+  .nav-links a:hover{color:var(--red);}
+  .nav-actions{display:flex;align-items:center;gap:10px;}
   .nav-cta{
-    background:var(--gold);color:var(--black);
-    padding:10px 20px;border-radius:6px;
+    background:var(--red);color:#fff;
+    padding:11px 22px;border-radius:4px;
     font-family:'Barlow Condensed',sans-serif;
-    font-size:12px;font-weight:700;letter-spacing:2px;
+    font-size:13px;font-weight:700;letter-spacing:2px;
     text-transform:uppercase;transition:.25s;
+    display:inline-flex;align-items:center;gap:8px;
   }
-  .nav-cta:hover{background:var(--gold2);transform:translateY(-1px);}
-  .burger{display:none;background:none;border:0;color:var(--white);cursor:pointer;}
+  .nav-cta:hover{background:var(--red-dark);transform:translateY(-1px);box-shadow:0 8px 20px rgba(225,14,26,.3);}
+  .burger{display:none;background:none;border:0;color:var(--white);cursor:pointer;padding:8px;}
 
   /* === HERO === */
   .hero{
     position:relative;
-    padding:140px 0 80px;
-    background:radial-gradient(ellipse at top,#1a1308 0%,#0a0a0a 60%);
+    padding:80px 0 90px;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%,rgba(225,14,26,.12) 0%,transparent 60%),
+      radial-gradient(ellipse 60% 80% at 100% 100%,rgba(201,168,76,.06) 0%,transparent 60%),
+      var(--black);
     overflow:hidden;
   }
   .hero::before{
     content:'';position:absolute;inset:0;
-    background:
-      radial-gradient(circle at 80% 30%,rgba(201,168,76,.15) 0%,transparent 50%),
-      radial-gradient(circle at 20% 70%,rgba(232,0,45,.08) 0%,transparent 50%);
+    background-image:
+      linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:50px 50px;
+    mask-image:radial-gradient(ellipse at center,#000 30%,transparent 70%);
     pointer-events:none;
   }
   .hero-grid{
     position:relative;z-index:2;
-    display:grid;grid-template-columns:1.1fr 1fr;
+    display:grid;grid-template-columns:1fr 1fr;
     gap:60px;align-items:center;
   }
   .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--gold-soft);
-    border:1px solid rgba(201,168,76,.3);
-    padding:6px 14px;border-radius:50px;
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(225,14,26,.08);
+    border:1px solid rgba(225,14,26,.3);
+    padding:8px 16px;border-radius:3px;
     font-family:'Barlow Condensed',sans-serif;
-    font-size:11px;font-weight:700;letter-spacing:3px;
-    text-transform:uppercase;color:var(--gold2);
-    margin-bottom:24px;
+    font-size:12px;font-weight:700;letter-spacing:3px;
+    text-transform:uppercase;color:#ff5560;
+    margin-bottom:28px;
   }
   .badge::before{
     content:'';width:6px;height:6px;border-radius:50%;
-    background:var(--gold);box-shadow:0 0 8px var(--gold);
+    background:var(--red);box-shadow:0 0 10px var(--red);
+    animation:pulse 2s infinite;
   }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+
   .hero h1{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(46px,7vw,92px);
-    line-height:.92;letter-spacing:2px;
-    margin-bottom:20px;
+    font-family:'Oswald',sans-serif;
+    font-weight:700;
+    font-size:clamp(44px,6.5vw,84px);
+    line-height:.95;letter-spacing:-1px;
+    margin-bottom:24px;
+    text-transform:uppercase;
   }
-  .hero h1 span{
-    display:block;
-    background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold));
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
+  .hero h1 .red{color:var(--red);}
+  .hero h1 .outline{
+    -webkit-text-stroke:1.5px var(--white);
+    color:transparent;
+    font-weight:500;
   }
   .hero p.lead{
     font-size:17px;color:#bbb;font-weight:300;
-    line-height:1.7;max-width:520px;margin-bottom:36px;
+    line-height:1.7;max-width:540px;margin-bottom:36px;
   }
   .hero p.lead strong{color:var(--white);font-weight:600;}
+
   .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
   .btn{
     display:inline-flex;align-items:center;gap:10px;
-    padding:16px 28px;border-radius:8px;
+    padding:16px 28px;border-radius:4px;
     font-family:'Barlow Condensed',sans-serif;
     font-size:14px;font-weight:700;letter-spacing:2px;
     text-transform:uppercase;
     transition:all .25s ease;cursor:pointer;border:0;
   }
   .btn-primary{
-    background:var(--gold);color:var(--black);
-    box-shadow:0 8px 24px rgba(201,168,76,.25);
+    background:var(--red);color:#fff;
+    box-shadow:0 10px 28px rgba(225,14,26,.3);
   }
-  .btn-primary:hover{
-    background:var(--gold2);transform:translateY(-2px);
-    box-shadow:0 12px 32px rgba(201,168,76,.4);
+  .btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 14px 34px rgba(225,14,26,.45);}
+  .btn-wpp{background:#25D366;color:#fff;}
+  .btn-wpp:hover{background:#1ebe5a;transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.35);}
+  .btn-outline{
+    background:transparent;color:var(--white);
+    border:1px solid var(--border);
   }
-  .btn-wpp{
-    background:#25D366;color:#fff;
-  }
-  .btn-wpp:hover{
-    background:#1ebe5a;transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(37,211,102,.35);
-  }
+  .btn-outline:hover{border-color:var(--red);color:var(--red);}
   .btn svg{width:18px;height:18px;}
 
+  .hero-meta{
+    display:flex;gap:30px;margin-top:34px;padding-top:28px;
+    border-top:1px solid var(--border);
+  }
+  .hero-meta-item .num{
+    font-family:'Oswald',sans-serif;
+    font-size:30px;font-weight:700;color:var(--red);line-height:1;
+  }
+  .hero-meta-item .lbl{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;font-weight:700;letter-spacing:2px;
+    color:var(--muted);text-transform:uppercase;margin-top:6px;
+  }
+
+  /* HERO VISUAL */
   .hero-visual{position:relative;}
-  .hero-visual .pedal-mock{
-    width:100%;aspect-ratio:1/1;
+  .product-stage{
+    aspect-ratio:1/1;
     background:
-      radial-gradient(circle at center,#1a1308,#0a0a0a 70%),
-      var(--card);
+      radial-gradient(circle at 50% 60%,#1a1a1a 0%,#0a0a0a 70%);
     border:1px solid var(--border);
-    border-radius:16px;
+    border-radius:8px;
     position:relative;overflow:hidden;
     display:flex;align-items:center;justify-content:center;
   }
-  .hero-visual .pedal-mock::before{
-    content:'';position:absolute;inset:-2px;
-    background:linear-gradient(135deg,var(--gold) 0%,transparent 50%,var(--accent) 100%);
-    opacity:.25;border-radius:18px;z-index:0;
+  .product-stage::before{
+    content:'';position:absolute;
+    bottom:0;left:50%;transform:translateX(-50%);
+    width:80%;height:30%;
+    background:radial-gradient(ellipse,rgba(225,14,26,.2),transparent 70%);
+    filter:blur(20px);
   }
-  .hero-visual .pedal-mock::after{
-    content:'';position:absolute;inset:1px;
-    background:radial-gradient(circle at center,#1a1308 0%,#0a0a0a 80%);
-    border-radius:15px;z-index:1;
-  }
-  .pedal-emblem{
+  /* TROCAR pela foto oficial do SP Pro 3-Set (hero image) */
+  .product-stage img{
+    width:85%;height:85%;object-fit:contain;
     position:relative;z-index:2;
-    text-align:center;padding:32px;
+    filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));
   }
-  .pedal-emblem .label{
+  .product-stage .placeholder{
+    text-align:center;z-index:2;position:relative;padding:30px;
+  }
+  .product-stage .placeholder .ph-icon{
+    font-family:'Oswald',sans-serif;font-size:96px;font-weight:700;
+    color:var(--red);line-height:1;letter-spacing:-3px;
+  }
+  .product-stage .placeholder .ph-tag{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:11px;letter-spacing:5px;color:var(--gold);
-    text-transform:uppercase;margin-bottom:14px;
+    font-size:13px;letter-spacing:4px;color:var(--muted);
+    text-transform:uppercase;margin-top:14px;font-weight:700;
   }
-  .pedal-emblem .title{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(60px,9vw,120px);
-    color:var(--white);letter-spacing:3px;line-height:.9;
+  .corner-badge{
+    position:absolute;top:18px;left:18px;
+    background:var(--black);border:1px solid var(--border);
+    padding:8px 14px;border-radius:3px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;font-weight:700;letter-spacing:2px;
+    color:var(--red);text-transform:uppercase;
+    z-index:3;
   }
-  .pedal-emblem .title span{color:var(--gold);}
-  .pedal-emblem .tag{
-    margin-top:18px;font-size:13px;color:var(--muted);
-    letter-spacing:2px;text-transform:uppercase;
-    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  .corner-badge::before{
+    content:'●';margin-right:8px;color:var(--red);
+    animation:pulse 2s infinite;
   }
-  .floating-spec{
-    position:absolute;
-    background:rgba(15,15,15,.92);
+  .stage-specs{
+    position:absolute;bottom:18px;left:18px;right:18px;
+    display:flex;justify-content:space-between;
+    gap:8px;z-index:3;
+  }
+  .stage-specs .ss-item{
+    background:rgba(0,0,0,.7);
     backdrop-filter:blur(8px);
     border:1px solid var(--border);
-    padding:14px 18px;border-radius:10px;
-    font-size:12px;display:flex;align-items:center;gap:10px;
-    animation:float 4s ease-in-out infinite;
+    padding:10px 14px;border-radius:3px;
+    flex:1;text-align:center;
   }
-  .floating-spec .num{
-    font-family:'Bebas Neue',sans-serif;font-size:26px;
-    color:var(--gold2);line-height:1;
+  .stage-specs .ss-num{
+    font-family:'Oswald',sans-serif;
+    font-size:18px;font-weight:700;color:var(--white);line-height:1;
   }
-  .floating-spec .txt{
+  .stage-specs .ss-lbl{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:10px;letter-spacing:2px;color:var(--muted);
-    text-transform:uppercase;font-weight:700;
-  }
-  .floating-spec.s1{top:8%;left:-6%;animation-delay:0s;}
-  .floating-spec.s2{bottom:14%;right:-8%;animation-delay:1.5s;}
-  @keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
+    font-size:9px;letter-spacing:1.5px;color:var(--muted);
+    text-transform:uppercase;margin-top:3px;font-weight:700;
   }
 
-  /* === STATS STRIP === */
-  .stats{
-    background:linear-gradient(90deg,var(--gold),var(--gold2));
-    padding:32px 0;
+  /* === TICKER === */
+  .ticker{
+    background:var(--red);color:#fff;
+    padding:14px 0;overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(0,0,0,.2);
   }
-  .stats-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
-    max-width:1200px;margin:0 auto;padding:0 24px;
+  .ticker-track{
+    display:flex;gap:50px;
+    animation:scroll 30s linear infinite;
+    white-space:nowrap;
   }
-  .stat{text-align:center;color:var(--black);border-right:1px solid rgba(0,0,0,.15);padding:0 10px;}
-  .stat:last-child{border-right:0;}
-  .stat-num{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:42px;letter-spacing:1px;line-height:1;
+  .ticker span{
+    font-family:'Oswald',sans-serif;font-weight:600;
+    font-size:14px;letter-spacing:3px;
+    text-transform:uppercase;
+    display:flex;align-items:center;gap:50px;
   }
-  .stat-lbl{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:11px;font-weight:700;letter-spacing:2.5px;
-    text-transform:uppercase;color:rgba(0,0,0,.65);
-    margin-top:6px;
+  .ticker span::after{
+    content:'★';color:rgba(255,255,255,.5);
+  }
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
   }
 
   /* === SECTION GENERIC === */
-  section{padding:90px 0;position:relative;}
-  .section-head{text-align:center;max-width:680px;margin:0 auto 60px;}
+  section{padding:100px 0;position:relative;}
+  .section-head{max-width:760px;margin:0 auto 60px;text-align:center;}
   .eyebrow{
-    display:inline-block;
+    display:inline-flex;align-items:center;gap:12px;
     font-family:'Barlow Condensed',sans-serif;
     font-size:12px;font-weight:700;letter-spacing:4px;
-    text-transform:uppercase;color:var(--gold);
-    margin-bottom:16px;
-    position:relative;padding:0 32px;
-  }
-  .eyebrow::before,.eyebrow::after{
-    content:'';position:absolute;top:50%;width:20px;height:1px;
-    background:var(--gold);
-  }
-  .eyebrow::before{left:0;}
-  .eyebrow::after{right:0;}
-  h2.section-title{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(36px,5vw,56px);
-    letter-spacing:2px;line-height:1;
+    text-transform:uppercase;color:var(--red);
     margin-bottom:18px;
   }
-  h2.section-title span{color:var(--gold);}
+  .eyebrow::before,.eyebrow::after{
+    content:'';width:30px;height:1px;background:var(--red);
+  }
+  h2.section-title{
+    font-family:'Oswald',sans-serif;
+    font-weight:700;
+    font-size:clamp(36px,5vw,56px);
+    letter-spacing:-1px;line-height:1;
+    margin-bottom:18px;text-transform:uppercase;
+  }
+  h2.section-title .red{color:var(--red);}
   .section-sub{
     color:var(--muted2);font-size:16px;
     font-weight:300;line-height:1.7;
@@ -273,6 +338,10 @@
 
   /* === PRODUCTS === */
   .products{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+    margin-bottom:24px;
+  }
+  .products-bottom{
     display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
   .product{
@@ -285,93 +354,131 @@
     display:flex;flex-direction:column;
   }
   .product:hover{
-    transform:translateY(-6px);
-    border-color:rgba(201,168,76,.4);
-    box-shadow:0 16px 40px rgba(0,0,0,.5);
+    transform:translateY(-4px);
+    border-color:rgba(225,14,26,.5);
+    box-shadow:0 18px 40px rgba(0,0,0,.5);
   }
   .product.featured{
-    border-color:var(--gold);
-    background:linear-gradient(160deg,#1a1308,var(--card) 60%);
+    border-color:var(--red);
   }
   .product.featured::before{
-    content:'MAIS VENDIDO';
+    content:'MAIS VENDIDO NO BRASIL';
     position:absolute;top:14px;right:14px;
-    background:var(--accent);color:#fff;
+    background:var(--red);color:#fff;
     font-family:'Barlow Condensed',sans-serif;
     font-size:10px;font-weight:700;letter-spacing:2px;
-    padding:5px 11px;border-radius:4px;z-index:3;
+    padding:6px 12px;border-radius:3px;z-index:3;
   }
   .product-img{
     aspect-ratio:4/3;
-    background:
-      radial-gradient(circle at center,#1f1810,#0a0a0a 80%);
+    background:radial-gradient(circle at 50% 70%,#1a1a1a,#0a0a0a 80%);
     display:flex;align-items:center;justify-content:center;
     border-bottom:1px solid var(--border);
     position:relative;overflow:hidden;
   }
   .product-img::after{
     content:'';position:absolute;
-    bottom:-50%;left:-20%;width:140%;height:100%;
-    background:radial-gradient(ellipse,rgba(201,168,76,.15),transparent 60%);
-    pointer-events:none;
+    bottom:0;left:50%;transform:translateX(-50%);
+    width:80%;height:30%;
+    background:radial-gradient(ellipse,rgba(225,14,26,.15),transparent 70%);
+    filter:blur(15px);
   }
-  .product-img .icon{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:64px;color:var(--gold);
-    letter-spacing:2px;position:relative;z-index:2;
+  /* TROCAR pelas fotos oficiais do site Simnet */
+  .product-img img{
+    width:80%;height:80%;object-fit:contain;
+    position:relative;z-index:2;
+    filter:drop-shadow(0 20px 24px rgba(0,0,0,.5));
   }
-  .product-body{padding:26px;flex:1;display:flex;flex-direction:column;}
+  .product-img .ph{
+    z-index:2;position:relative;text-align:center;padding:20px;
+  }
+  .product-img .ph-name{
+    font-family:'Oswald',sans-serif;
+    font-size:48px;font-weight:700;color:var(--white);
+    letter-spacing:-1px;line-height:1;
+  }
+  .product-img .ph-name .r{color:var(--red);}
+  .product-img .ph-sub{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;letter-spacing:3px;color:var(--muted);
+    text-transform:uppercase;margin-top:10px;font-weight:700;
+  }
+  .product-body{padding:28px;flex:1;display:flex;flex-direction:column;}
   .product-tier{
     font-family:'Barlow Condensed',sans-serif;
     font-size:11px;font-weight:700;letter-spacing:3px;
-    color:var(--muted);text-transform:uppercase;
-    margin-bottom:8px;
+    color:var(--red);text-transform:uppercase;
+    margin-bottom:10px;
   }
   .product-name{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:30px;letter-spacing:1.5px;line-height:1;
-    color:var(--white);margin-bottom:10px;
+    font-family:'Oswald',sans-serif;font-weight:700;
+    font-size:28px;letter-spacing:-.5px;line-height:1;
+    color:var(--white);margin-bottom:12px;text-transform:uppercase;
   }
-  .product-name span{color:var(--gold);}
   .product-desc{
     font-size:14px;color:#aaa;font-weight:300;
-    line-height:1.6;margin-bottom:18px;
+    line-height:1.65;margin-bottom:20px;
   }
   .product-specs{
     list-style:none;
     border-top:1px solid var(--border);
-    padding-top:16px;margin-bottom:22px;
-    display:flex;flex-direction:column;gap:8px;
+    padding-top:18px;margin-bottom:22px;
+    display:flex;flex-direction:column;gap:9px;
     flex:1;
   }
   .product-specs li{
     font-size:13px;color:#ccc;
-    display:flex;align-items:flex-start;gap:8px;
+    display:flex;align-items:flex-start;gap:10px;
     font-weight:400;
   }
   .product-specs li::before{
-    content:'▸';color:var(--gold);flex-shrink:0;
+    content:'';flex-shrink:0;width:14px;height:14px;
+    margin-top:3px;border-radius:2px;
+    background:var(--red);
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
   }
-  .product-cta{
-    display:flex;align-items:center;justify-content:space-between;
-    padding-top:16px;border-top:1px solid var(--border);
+  .product-price-row{
+    border-top:1px solid var(--border);
+    padding-top:18px;
+    display:flex;align-items:flex-end;justify-content:space-between;
+    flex-wrap:wrap;gap:14px;
   }
-  .product-cta .price-lbl{
+  .price{display:flex;flex-direction:column;gap:2px;}
+  .price-lbl{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:11px;font-weight:700;letter-spacing:2px;
+    font-size:10px;font-weight:700;letter-spacing:2px;
     color:var(--muted);text-transform:uppercase;
   }
-  .product-cta .btn-mini{
-    background:var(--gold);color:var(--black);
-    padding:10px 18px;border-radius:6px;
+  .price-value{
+    font-family:'Oswald',sans-serif;
+    font-size:32px;font-weight:700;color:var(--white);
+    line-height:1;letter-spacing:-.5px;
+  }
+  .price-value .cur{font-size:18px;color:var(--muted2);margin-right:2px;}
+  .price-installment{
+    font-size:12px;color:var(--muted);margin-top:4px;
+  }
+  .price-installment strong{color:var(--gold2);font-weight:600;}
+  .product-cta{display:flex;gap:8px;}
+  .btn-mini{
+    background:var(--red);color:#fff;
+    padding:11px 18px;border-radius:4px;
     font-family:'Barlow Condensed',sans-serif;
     font-size:12px;font-weight:700;letter-spacing:1.5px;
     text-transform:uppercase;transition:.2s;
+    display:inline-flex;align-items:center;gap:6px;
   }
-  .product-cta .btn-mini:hover{background:var(--gold2);}
+  .btn-mini:hover{background:var(--red-dark);}
+  .btn-mini.wpp{background:#25D366;}
+  .btn-mini.wpp:hover{background:#1ebe5a;}
 
   /* === FEATURES === */
-  .features-wrap{background:var(--dark);}
+  .features-wrap{
+    background:var(--dark);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
   .features{
     display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
   }
@@ -385,49 +492,83 @@
   }
   .feature::before{
     content:'';position:absolute;top:0;left:0;
-    width:0;height:2px;background:var(--gold);
-    transition:width .3s ease;
+    width:3px;height:0;background:var(--red);
+    transition:height .3s ease;
   }
-  .feature:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.3);}
-  .feature:hover::before{width:100%;}
+  .feature:hover{transform:translateY(-4px);border-color:rgba(225,14,26,.4);}
+  .feature:hover::before{height:100%;}
   .feature-icon{
-    width:54px;height:54px;border-radius:12px;
-    background:var(--gold-soft);
-    border:1px solid rgba(201,168,76,.25);
+    width:48px;height:48px;border-radius:6px;
+    background:rgba(225,14,26,.1);
+    border:1px solid rgba(225,14,26,.25);
     display:flex;align-items:center;justify-content:center;
     margin-bottom:20px;
-    color:var(--gold2);
+    color:var(--red);
   }
-  .feature-icon svg{width:26px;height:26px;}
+  .feature-icon svg{width:24px;height:24px;}
   .feature h3{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:20px;font-weight:700;letter-spacing:1px;
+    font-family:'Oswald',sans-serif;font-weight:600;
+    font-size:20px;letter-spacing:0;line-height:1.2;
     text-transform:uppercase;color:var(--white);
     margin-bottom:10px;
   }
   .feature p{
     font-size:14px;color:#999;font-weight:300;
-    line-height:1.6;
+    line-height:1.65;
+  }
+
+  /* === HAPTIC === */
+  .haptic-wrap{
+    background:
+      radial-gradient(ellipse at 0% 50%,rgba(225,14,26,.08),transparent 50%),
+      var(--black);
+  }
+  .haptic-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .haptic{
+    background:linear-gradient(180deg,var(--card),var(--dark));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:32px;
+    position:relative;overflow:hidden;
+  }
+  .haptic-code{
+    font-family:'Oswald',sans-serif;
+    font-size:48px;font-weight:700;color:var(--red);
+    line-height:1;letter-spacing:-1px;margin-bottom:6px;
+  }
+  .haptic-type{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;letter-spacing:3px;color:var(--muted);
+    text-transform:uppercase;font-weight:700;margin-bottom:18px;
+  }
+  .haptic h4{
+    font-family:'Oswald',sans-serif;font-weight:600;
+    font-size:18px;color:var(--white);
+    text-transform:uppercase;letter-spacing:.5px;
+    margin-bottom:10px;
+  }
+  .haptic p{
+    font-size:13px;color:#999;font-weight:300;line-height:1.65;
   }
 
   /* === SPECS === */
-  .specs-wrap{
-    background:linear-gradient(180deg,var(--black),#0d0a05);
-  }
+  .specs-wrap{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
   .specs-table{
     background:var(--card);
     border:1px solid var(--border);
     border-radius:var(--radius);
     overflow:hidden;
-    max-width:900px;margin:0 auto;
+    max-width:980px;margin:0 auto;
   }
   .spec-row{
-    display:grid;grid-template-columns:1fr 1fr 1fr 1fr;
+    display:grid;grid-template-columns:1.2fr 1fr 1fr;
     border-bottom:1px solid var(--border);
   }
   .spec-row:last-child{border-bottom:0;}
   .spec-row.head{
-    background:linear-gradient(90deg,#1a1308,var(--card2));
+    background:linear-gradient(90deg,#1f1f1f,var(--card2));
   }
   .spec-cell{
     padding:18px 22px;
@@ -443,14 +584,14 @@
     background:rgba(255,255,255,.02);
   }
   .spec-row.head .spec-cell{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:18px;letter-spacing:2px;color:var(--gold2);
-    padding:18px 22px;
+    font-family:'Oswald',sans-serif;font-weight:600;
+    font-size:17px;letter-spacing:0;color:var(--white);
+    padding:20px 22px;text-transform:uppercase;
   }
-  .spec-row.head .spec-cell.lbl{color:var(--gold);}
+  .spec-row.head .spec-cell.lbl{color:var(--red);}
 
   /* === TESTIMONIALS === */
-  .testimonials-wrap{background:var(--dark);}
+  .testimonials-wrap{background:var(--black);}
   .testimonials{
     display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
   }
@@ -463,71 +604,37 @@
     position:relative;
   }
   .testimonial::before{
-    content:'"';
-    position:absolute;top:-12px;left:20px;
-    font-family:'Bebas Neue',sans-serif;
-    font-size:80px;color:var(--gold);
-    line-height:1;
+    content:'';
+    position:absolute;top:0;left:0;
+    width:40px;height:3px;background:var(--red);
   }
-  .stars{display:flex;gap:3px;color:var(--gold);font-size:16px;}
+  .stars{display:flex;gap:3px;color:var(--gold);font-size:14px;}
   .testimonial p{
     font-size:14px;color:#ccc;font-weight:300;
-    line-height:1.7;flex:1;
+    line-height:1.75;flex:1;font-style:italic;
   }
-  .who{display:flex;align-items:center;gap:12px;}
+  .who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:18px;}
   .avatar{
-    width:42px;height:42px;border-radius:50%;
-    background:linear-gradient(135deg,var(--gold),#8b7332);
+    width:40px;height:40px;border-radius:50%;
+    background:linear-gradient(135deg,var(--red),var(--red-dark));
     display:flex;align-items:center;justify-content:center;
-    font-family:'Bebas Neue',sans-serif;
-    color:var(--black);font-size:18px;
+    font-family:'Oswald',sans-serif;font-weight:600;
+    color:#fff;font-size:16px;
   }
   .who-info .name{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:14px;font-weight:700;letter-spacing:1px;
-    color:var(--white);
+    font-family:'Oswald',sans-serif;font-weight:600;
+    font-size:15px;letter-spacing:0;color:var(--white);
+    text-transform:uppercase;
   }
   .who-info .role{
     font-size:12px;color:var(--muted);
-  }
-
-  /* === GALLERY === */
-  .gallery{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
-  }
-  .gallery-item{
-    aspect-ratio:1/1;
-    background:
-      radial-gradient(circle at center,#1f1810,#0a0a0a 80%),
-      var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    display:flex;align-items:center;justify-content:center;
-    transition:.3s;cursor:pointer;position:relative;overflow:hidden;
-  }
-  .gallery-item::after{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle,rgba(201,168,76,.1),transparent 70%);
-    opacity:0;transition:.3s;
-  }
-  .gallery-item:hover{border-color:var(--gold);transform:scale(1.02);}
-  .gallery-item:hover::after{opacity:1;}
-  .gallery-item .gi-label{
-    text-align:center;z-index:2;position:relative;
-  }
-  .gallery-item .gi-num{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:42px;color:var(--gold);letter-spacing:2px;line-height:1;
-  }
-  .gallery-item .gi-txt{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:10px;font-weight:700;letter-spacing:2px;
-    color:var(--muted);text-transform:uppercase;margin-top:6px;
+    letter-spacing:1px;text-transform:uppercase;
   }
 
   /* === FAQ === */
-  .faq-wrap{background:linear-gradient(180deg,var(--black),#0d0a05);}
-  .faq{max-width:820px;margin:0 auto;}
+  .faq-wrap{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .faq{max-width:840px;margin:0 auto;}
   .faq-item{
     background:var(--card);
     border:1px solid var(--border);
@@ -536,87 +643,84 @@
     overflow:hidden;
     transition:.2s;
   }
-  .faq-item:hover{border-color:rgba(201,168,76,.3);}
+  .faq-item:hover{border-color:rgba(225,14,26,.3);}
   .faq-q{
     width:100%;background:none;border:0;
-    padding:20px 24px;text-align:left;
+    padding:22px 26px;text-align:left;
     color:var(--white);cursor:pointer;
     display:flex;justify-content:space-between;align-items:center;
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:16px;font-weight:700;letter-spacing:.5px;
+    font-family:'Oswald',sans-serif;font-weight:500;
+    font-size:16px;letter-spacing:.3px;
     text-transform:uppercase;
   }
   .faq-q .plus{
-    font-family:'Bebas Neue',sans-serif;
-    color:var(--gold);font-size:24px;
+    color:var(--red);font-size:24px;font-weight:300;
     transition:.3s;flex-shrink:0;margin-left:16px;
   }
   .faq-item.active .faq-q .plus{transform:rotate(45deg);}
-  .faq-a{
-    max-height:0;overflow:hidden;
-    transition:max-height .35s ease;
-  }
-  .faq-item.active .faq-a{max-height:300px;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .faq-item.active .faq-a{max-height:400px;}
   .faq-a-inner{
-    padding:0 24px 20px;color:#aaa;
-    font-size:14px;font-weight:300;line-height:1.7;
+    padding:0 26px 22px;color:#aaa;
+    font-size:14px;font-weight:300;line-height:1.75;
   }
 
   /* === CTA FINAL === */
   .cta-final{
     background:
-      radial-gradient(ellipse at center,#1a1308,#0a0a0a 70%),
+      radial-gradient(ellipse at 50% 0%,rgba(225,14,26,.15),transparent 60%),
       var(--black);
-    text-align:center;padding:100px 0;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
+    text-align:center;padding:110px 0;
     position:relative;overflow:hidden;
   }
   .cta-final::before{
     content:'';position:absolute;inset:0;
-    background:
-      radial-gradient(circle at 20% 50%,rgba(201,168,76,.1),transparent 50%),
-      radial-gradient(circle at 80% 50%,rgba(232,0,45,.06),transparent 50%);
+    background-image:
+      linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:60px 60px;
+    mask-image:radial-gradient(ellipse at center,#000 30%,transparent 70%);
     pointer-events:none;
   }
-  .cta-final-inner{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:0 24px;}
+  .cta-final-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 24px;}
   .cta-final h2{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(40px,6vw,68px);
-    line-height:1;letter-spacing:2px;margin-bottom:18px;
+    font-family:'Oswald',sans-serif;font-weight:700;
+    font-size:clamp(40px,6vw,72px);
+    line-height:.95;letter-spacing:-1px;margin-bottom:20px;
+    text-transform:uppercase;
   }
-  .cta-final h2 span{color:var(--gold);}
+  .cta-final h2 .red{color:var(--red);}
   .cta-final p{
     color:#bbb;font-size:17px;font-weight:300;
-    line-height:1.7;margin-bottom:36px;
+    line-height:1.7;margin-bottom:40px;
   }
 
   /* === FOOTER === */
   footer{
     background:var(--black);
-    padding:50px 0 30px;
+    padding:60px 0 30px;
     border-top:1px solid var(--border);
   }
   .footer-grid{
     display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
     gap:40px;margin-bottom:40px;
   }
-  .footer-brand .logo{margin-bottom:14px;display:inline-block;}
+  .footer-brand .logo{margin-bottom:18px;}
   .footer-brand p{
-    color:var(--muted);font-size:14px;font-weight:300;
+    color:var(--muted);font-size:13px;font-weight:300;
     line-height:1.7;max-width:380px;
   }
   .footer-col h4{
     font-family:'Barlow Condensed',sans-serif;
     font-size:12px;font-weight:700;letter-spacing:3px;
-    text-transform:uppercase;color:var(--gold);
+    text-transform:uppercase;color:var(--red);
     margin-bottom:18px;
   }
-  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
   .footer-col a{
-    color:var(--muted2);font-size:14px;transition:.2s;
+    color:var(--muted2);font-size:13px;transition:.2s;
   }
-  .footer-col a:hover{color:var(--gold);}
+  .footer-col a:hover{color:var(--red);}
   .footer-bot{
     padding-top:24px;border-top:1px solid var(--border);
     display:flex;justify-content:space-between;align-items:center;
@@ -625,12 +729,28 @@
     letter-spacing:1.5px;text-transform:uppercase;
     flex-wrap:wrap;gap:14px;
   }
+  .footer-bot .br-mark{
+    display:inline-flex;align-items:center;gap:6px;
+    color:var(--br-yellow);
+  }
+
+  /* === FLOATING WHATSAPP === */
+  .float-wpp{
+    position:fixed;bottom:24px;right:24px;
+    width:56px;height:56px;border-radius:50%;
+    background:#25D366;color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(37,211,102,.4);
+    z-index:99;transition:.25s;
+  }
+  .float-wpp:hover{transform:scale(1.08);box-shadow:0 12px 30px rgba(37,211,102,.55);}
+  .float-wpp svg{width:28px;height:28px;}
 
   /* === RESPONSIVE === */
   @media (max-width:980px){
-    .hero{padding:120px 0 60px;}
+    .hero{padding:60px 0 70px;}
     .hero-grid{grid-template-columns:1fr;gap:50px;}
-    .floating-spec{display:none;}
+    .hero-meta{justify-content:flex-start;}
     .nav-links{display:none;}
     .burger{display:flex;align-items:center;justify-content:center;width:38px;height:38px;}
     .nav-links.open{
@@ -639,26 +759,27 @@
       background:var(--black);padding:24px;gap:18px;
       border-bottom:1px solid var(--border);
     }
-    .products,.features,.testimonials{grid-template-columns:1fr;}
-    .gallery{grid-template-columns:repeat(2,1fr);}
-    .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
-    .stat{border-right:0;}
-    .spec-row{grid-template-columns:1fr 1fr;}
-    .spec-cell{padding:14px 16px;font-size:13px;}
-    .spec-row.head .spec-cell{font-size:15px;}
+    .products,.products-bottom,.features,.haptic-grid,.testimonials{grid-template-columns:1fr;}
+    .spec-row{grid-template-columns:1fr 1fr 1fr;}
+    .spec-cell{padding:14px 12px;font-size:12px;}
+    .spec-row.head .spec-cell{font-size:14px;}
     .footer-grid{grid-template-columns:1fr 1fr;gap:30px;}
     section{padding:70px 0;}
   }
   @media (max-width:560px){
     .container{padding:0 18px;}
     .nav{padding:14px 18px;}
+    .nav-actions .nav-cta{display:none;}
     .footer-grid{grid-template-columns:1fr;}
     .footer-bot{flex-direction:column;text-align:center;}
-    .stats-grid{grid-template-columns:repeat(2,1fr);}
-    .stat-num{font-size:32px;}
+    .stage-specs{flex-direction:column;}
+    .br-strip{flex-direction:column;gap:6px;font-size:10px;}
+    .hero-meta{flex-wrap:wrap;gap:18px;}
     .btn{padding:14px 22px;font-size:13px;}
     .cta-row{flex-direction:column;}
     .cta-row .btn{justify-content:center;}
+    .float-wpp{width:50px;height:50px;bottom:18px;right:18px;}
+    .float-wpp svg{width:24px;height:24px;}
   }
 
   /* Reveal animation */
@@ -668,21 +789,38 @@
 </head>
 <body>
 
+<!-- BRAZIL STRIP -->
+<div class="br-strip">
+  <span class="flag">Distribuição oficial Brasil</span>
+  <span>★</span>
+  <span>Entrega para todo o país • NF</span>
+  <span>★</span>
+  <span>Suporte em português</span>
+</div>
+
 <!-- HEADER -->
 <header>
   <nav class="nav">
-    <a href="#" class="logo">KINGS <span>SIMNET</span></a>
+    <a href="#" class="logo">
+      <span class="logo-mark">S</span>
+      <span>SIMNET <span class="x">×</span> <span class="kings">KINGS</span></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#produtos">Pedais</a></li>
-      <li><a href="#diferenciais">Diferenciais</a></li>
-      <li><a href="#specs">Especificações</a></li>
-      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#haptic">Haptic</a></li>
+      <li><a href="#diferenciais">Tecnologia</a></li>
+      <li><a href="#specs">Specs</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="nav-cta">Comprar</a>
-    <button class="burger" id="burger" aria-label="Abrir menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+    <div class="nav-actions">
+      <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/></svg>
+        Comprar
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </nav>
 </header>
 
@@ -690,65 +828,68 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge">Linha Oficial Simnet • Kings Simuladores</span>
+      <span class="badge">Simnet Racing • Oficial no Brasil</span>
       <h1>
-        Sinta cada<br>
-        frenagem.
-        <span>Pedais Simnet.</span>
+        SP PRO<br>
+        <span class="red">LOAD CELL</span><br>
+        <span class="outline">100KG</span>
       </h1>
       <p class="lead">
-        A linha completa de pedais <strong>Simnet</strong> com tecnologia <strong>load cell</strong> de alta precisão, construção em aço carbono e ajustes profissionais — desenvolvida no Brasil para quem leva o sim racing a sério.
+        O pedal que está dominando o sim racing internacional agora com <strong>entrega no Brasil</strong> pela Kings Simuladores. Construção em <strong>aço inox 3mm</strong>, sensor de carga de 100kg com resolução 12-bit e mais de <strong>343 configurações</strong> de frenagem personalizáveis.
       </p>
       <div class="cta-row">
         <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-          Comprar na loja
+          Comprar na Kings
         </a>
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20pedais%20Simnet." target="_blank" rel="noopener" class="btn btn-wpp">
+        <a href="https://wa.me/5511959018725?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20pedais%20Simnet%20SP%20Pro." target="_blank" rel="noopener" class="btn btn-wpp">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          WhatsApp
+          Chamar no Zap
         </a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">100kg</div>
+          <div class="lbl">Load Cell</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">12-bit</div>
+          <div class="lbl">Resolução</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">343+</div>
+          <div class="lbl">Configurações</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">3mm</div>
+          <div class="lbl">Aço Inox</div>
+        </div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="pedal-mock">
-        <div class="pedal-emblem">
-          <div class="label">Simnet Racing</div>
-          <div class="title">SIM<span>NET</span></div>
-          <div class="tag">Load Cell • Made in Brazil</div>
+      <div class="product-stage">
+        <div class="corner-badge">SP Pro 3-Set</div>
+        <!-- TROCAR pela foto oficial do hero (SP Pro 3-Set com haptic) -->
+        <!-- <img src="URL_DA_FOTO_AQUI" alt="Simnet SP Pro 3-Set"> -->
+        <div class="placeholder">
+          <div class="ph-icon">SP<br>PRO</div>
+          <div class="ph-tag">Loadcell • Haptic Ready</div>
         </div>
-      </div>
-      <div class="floating-spec s1">
-        <div class="num">120<small style="font-size:14px;">kg</small></div>
-        <div class="txt">Pressão<br>Load Cell</div>
-      </div>
-      <div class="floating-spec s2">
-        <div class="num">3</div>
-        <div class="txt">Plataformas<br>PC • PS • Xbox</div>
+        <div class="stage-specs">
+          <div class="ss-item"><div class="ss-num">100<small style="font-size:11px;">kg</small></div><div class="ss-lbl">Load Cell</div></div>
+          <div class="ss-item"><div class="ss-num">3</div><div class="ss-lbl">Pedais</div></div>
+          <div class="ss-item"><div class="ss-num">3</div><div class="ss-lbl">Haptic</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="stat-num">+2.000</div>
-      <div class="stat-lbl">Pedais Entregues</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">120kg</div>
-      <div class="stat-lbl">Load Cell</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">2 ANOS</div>
-      <div class="stat-lbl">De Garantia</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4,9/5</div>
-      <div class="stat-lbl">Avaliação Média</div>
-    </div>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Load Cell 100kg</span><span>Aço Inox 3mm</span><span>Haptic Feedback</span><span>Fanatec Ready</span><span>Pronta Entrega BR</span><span>Garantia Oficial</span><span>NF e Boleto</span><span>Suporte PT-BR</span>
+    <span>Load Cell 100kg</span><span>Aço Inox 3mm</span><span>Haptic Feedback</span><span>Fanatec Ready</span><span>Pronta Entrega BR</span><span>Garantia Oficial</span><span>NF e Boleto</span><span>Suporte PT-BR</span>
   </div>
 </div>
 
@@ -756,71 +897,182 @@
 <section id="produtos">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Linha Simnet</span>
-      <h2 class="section-title">Escolha seu <span>set perfeito</span></h2>
-      <p class="section-sub">Três configurações pensadas para todos os níveis — do entusiasta que está montando o primeiro cockpit ao piloto profissional que disputa campeonatos online.</p>
+      <span class="eyebrow">Linha SP Pro</span>
+      <h2 class="section-title">Escolha o seu <span class="red">setup ideal</span></h2>
+      <p class="section-sub">Da configuração de 2 pedais para o entusiasta até o combo completo com haptic feedback para o piloto profissional — toda a linha Simnet com pronta entrega no Brasil.</p>
     </div>
 
+    <!-- LINHA PRINCIPAL: SP PRO 2-SET E 3-SET -->
     <div class="products">
       <article class="product reveal">
-        <div class="product-img"><div class="icon">SP-2</div></div>
+        <div class="product-img">
+          <!-- TROCAR pela foto oficial: SP Pro 2-Set -->
+          <!-- <img src="URL_FOTO_2SET" alt="Simnet SP Pro 2-Set"> -->
+          <div class="ph">
+            <div class="ph-name">SP <span class="r">PRO</span></div>
+            <div class="ph-sub">2-Set • Acelerador + Freio</div>
+          </div>
+        </div>
         <div class="product-body">
-          <div class="product-tier">Entry • 2 Pedais</div>
-          <h3 class="product-name">Simnet <span>Start</span></h3>
-          <p class="product-desc">O combo ideal para quem está iniciando no sim racing com qualidade real de pedalada.</p>
+          <div class="product-tier">Loadcell • 2 Pedais</div>
+          <h3 class="product-name">SP Pro 2-Set</h3>
+          <p class="product-desc">Conjunto de freio e acelerador com sensor de carga de 100kg, resolução 12-bit e ajustes profissionais. O ponto de entrada ideal para quem está saindo de pedais com potenciômetro.</p>
           <ul class="product-specs">
-            <li>Acelerador com sensor Hall</li>
-            <li>Freio com mola progressiva</li>
-            <li>Base em aço carbono dobrado</li>
-            <li>Compatível PC e PlayStation</li>
+            <li>Freio com Load Cell 100kg (12-bit)</li>
+            <li>Acelerador com sensor de carga dedicado</li>
+            <li>Estrutura em aço inox 3mm com pintura eletrostática</li>
+            <li>Damper hidráulico removível em cada pedal</li>
+            <li>3 elastômeros + mola (343 combinações)</li>
+            <li>Compatível PC e Fanatec (PS/Xbox via wheelbase)</li>
           </ul>
-          <div class="product-cta">
-            <span class="price-lbl">A partir de</span>
-            <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="price-lbl">A partir de*</span>
+              <span class="price-value"><span class="cur">R$</span>3.490</span>
+              <span class="price-installment">ou <strong>12× R$ 290,83</strong> sem juros</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Comprar</a>
+              <a href="https://wa.me/5511959018725?text=Quero%20saber%20mais%20sobre%20o%20SP%20Pro%202-Set." target="_blank" rel="noopener" class="btn-mini wpp" title="WhatsApp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </article>
 
       <article class="product featured reveal">
-        <div class="product-img"><div class="icon">SP-3 LC</div></div>
+        <div class="product-img">
+          <!-- TROCAR pela foto oficial: SP Pro 3-Set -->
+          <!-- <img src="URL_FOTO_3SET" alt="Simnet SP Pro 3-Set"> -->
+          <div class="ph">
+            <div class="ph-name">SP <span class="r">PRO</span></div>
+            <div class="ph-sub">3-Set • Acel + Freio + Embreagem</div>
+          </div>
+        </div>
         <div class="product-body">
-          <div class="product-tier">Pro • 3 Pedais Load Cell</div>
-          <h3 class="product-name">Simnet <span>Pro</span></h3>
-          <p class="product-desc">O conjunto completo com freio load cell de 120kg — o set mais vendido da linha.</p>
+          <div class="product-tier">Loadcell • 3 Pedais</div>
+          <h3 class="product-name">SP Pro 3-Set</h3>
+          <p class="product-desc">O conjunto completo: acelerador, freio com load cell de 100kg e embreagem. Setup escolhido por quem corre GT, F1 e quer a melhor relação custo-benefício do mercado.</p>
           <ul class="product-specs">
-            <li>Freio load cell até 120kg de pressão</li>
-            <li>Acelerador e embreagem Hall sensor</li>
-            <li>Ajuste de curso e dureza independentes</li>
-            <li>Estrutura reforçada em aço 3mm</li>
-            <li>Plug & Play • PC, PS5 e Xbox</li>
+            <li>3 pedais (acelerador, freio load cell, embreagem)</li>
+            <li>Load Cell 100kg com 12-bit de resolução</li>
+            <li>3 níveis de sensibilidade ajustáveis</li>
+            <li>Aço inox 3mm laser cortado e pintura eletrostática</li>
+            <li>3 dampers hidráulicos removíveis</li>
+            <li>343 combinações de elastômero + mola</li>
+            <li>Plug & Play via SimConnect Manager</li>
           </ul>
-          <div class="product-cta">
-            <span class="price-lbl">Mais escolhido</span>
-            <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="price-lbl">A partir de*</span>
+              <span class="price-value"><span class="cur">R$</span>3.990</span>
+              <span class="price-installment">ou <strong>12× R$ 332,50</strong> sem juros</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Comprar</a>
+              <a href="https://wa.me/5511959018725?text=Quero%20saber%20mais%20sobre%20o%20SP%20Pro%203-Set." target="_blank" rel="noopener" class="btn-mini wpp" title="WhatsApp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- LINHA INFERIOR: HAPTIC BUNDLE, BASEPLATE, ACCESSORIES -->
+    <div class="products-bottom">
+      <article class="product reveal">
+        <div class="product-img">
+          <!-- TROCAR pela foto oficial: Haptic Bundle -->
+          <!-- <img src="URL_FOTO_HAPTIC" alt="Simnet Haptic Bundle"> -->
+          <div class="ph">
+            <div class="ph-name">HPM</div>
+            <div class="ph-sub">Haptic Bundle</div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-tier">Haptic Feedback</div>
+          <h3 class="product-name">Haptic Bundle</h3>
+          <p class="product-desc">Combo com até 3 motores de haptic (HPM-L, HPM-R e PTT) para você sentir ABS, perda de aderência e textura da pista direto no pé.</p>
+          <ul class="product-specs">
+            <li>Compatível com SP Pro 2-Set e 3-Set</li>
+            <li>HPM-L Linear • HPM-R Rumble • PTT Transducer</li>
+            <li>Telemetria em tempo real</li>
+          </ul>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="price-lbl">A partir de*</span>
+              <span class="price-value"><span class="cur">R$</span>1.290</span>
+              <span class="price-installment">ou 10× sem juros</span>
+            </div>
+            <a href="https://wa.me/5511959018725?text=Quero%20o%20Haptic%20Bundle%20da%20Simnet." target="_blank" rel="noopener" class="btn-mini wpp">Consultar</a>
           </div>
         </div>
       </article>
 
       <article class="product reveal">
-        <div class="product-img"><div class="icon">SP-X</div></div>
+        <div class="product-img">
+          <!-- TROCAR pela foto oficial: Baseplate -->
+          <!-- <img src="URL_FOTO_BASEPLATE" alt="Simnet SP Pro Baseplate"> -->
+          <div class="ph">
+            <div class="ph-name">BASE</div>
+            <div class="ph-sub">Plate em Alumínio</div>
+          </div>
+        </div>
         <div class="product-body">
-          <div class="product-tier">Elite • Edição Profissional</div>
-          <h3 class="product-name">Simnet <span>Elite</span></h3>
-          <p class="product-desc">A versão topo de linha para campeonatos competitivos e cockpits profissionais.</p>
+          <div class="product-tier">Acessório</div>
+          <h3 class="product-name">SP Pro Baseplate</h3>
+          <p class="product-desc">Plataforma em alumínio anodizado para usar os pedais sem cockpit fixo. Apoio de calcanhar regulável.</p>
           <ul class="product-specs">
-            <li>Load cell calibrável até 150kg</li>
-            <li>Acabamento em alumínio anodizado</li>
-            <li>Software de calibração proprietário</li>
-            <li>Curva de resposta customizável</li>
-            <li>Inclui maleta de transporte</li>
+            <li>Alumínio anodizado preto</li>
+            <li>Apoio de calcanhar ajustável</li>
+            <li>Padrão de furação universal</li>
           </ul>
-          <div class="product-cta">
-            <span class="price-lbl">Sob consulta</span>
-            <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="price-lbl">A partir de*</span>
+              <span class="price-value"><span class="cur">R$</span>890</span>
+              <span class="price-installment">ou 6× sem juros</span>
+            </div>
+            <a href="https://wa.me/5511959018725?text=Quero%20a%20Baseplate%20Simnet." target="_blank" rel="noopener" class="btn-mini wpp">Consultar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal">
+        <div class="product-img">
+          <!-- TROCAR pela foto oficial: Accessories -->
+          <!-- <img src="URL_FOTO_ACC" alt="Simnet SP Pro Acessórios"> -->
+          <div class="ph">
+            <div class="ph-name">KIT</div>
+            <div class="ph-sub">Acessórios SP Pro</div>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-tier">Acessório</div>
+          <h3 class="product-name">SP Pro Accessories</h3>
+          <p class="product-desc">Elastômeros extras, molas, dampers e peças de reposição para manter seu set tunado e calibrado em qualquer condição.</p>
+          <ul class="product-specs">
+            <li>Kit de elastômeros (preto/azul/vermelho)</li>
+            <li>Molas opcionais</li>
+            <li>Dampers hidráulicos sobressalentes</li>
+          </ul>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="price-lbl">A partir de*</span>
+              <span class="price-value"><span class="cur">R$</span>290</span>
+              <span class="price-installment">sob consulta</span>
+            </div>
+            <a href="https://wa.me/5511959018725?text=Quero%20acess%C3%B3rios%20do%20SP%20Pro." target="_blank" rel="noopener" class="btn-mini wpp">Consultar</a>
           </div>
         </div>
       </article>
     </div>
+
+    <p style="text-align:center;margin-top:36px;font-size:12px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;letter-spacing:1.5px;text-transform:uppercase;">
+      * Preços de referência. Confirme valores atuais com a Kings Simuladores antes de finalizar a compra.
+    </p>
   </div>
 </section>
 
@@ -828,9 +1080,9 @@
 <section id="diferenciais" class="features-wrap">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Por que Simnet</span>
-      <h2 class="section-title">Tecnologia que faz <span>diferença na pista</span></h2>
-      <p class="section-sub">Cada pedal é projetado para entregar a sensação real de um carro de competição, com componentes que duram e ajustes que acompanham sua evolução.</p>
+      <span class="eyebrow">Tecnologia SP Pro</span>
+      <h2 class="section-title">A engenharia que <span class="red">define o ritmo</span></h2>
+      <p class="section-sub">Cada componente do SP Pro foi projetado para entregar a sensação real de um carro de competição — load cell de verdade, materiais que aguentam e ajustes infinitos.</p>
     </div>
 
     <div class="features">
@@ -838,48 +1090,80 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3>Load Cell de Verdade</h3>
-        <p>Sensor de carga de até 120kg que mede a pressão real aplicada — exatamente como um freio de competição. Frenagens consistentes e progressivas, volta após volta.</p>
+        <h3>Load Cell 100kg</h3>
+        <p>Sensor de carga real com 12-bit de resolução. Mede a pressão aplicada, não o curso — exatamente como um freio de competição. Consistência absoluta volta após volta.</p>
       </div>
 
       <div class="feature reveal">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
         </div>
-        <h3>Ajustes Profissionais</h3>
-        <p>Regule curso, ângulo e dureza de cada pedal sem precisar de oficina. Personalize o feeling para cada simulador e categoria de carro.</p>
+        <h3>Aço Inox 3mm</h3>
+        <p>Estrutura em aço inoxidável de 3mm cortado a laser com pintura eletrostática. Rigidez total mesmo nas frenagens mais agressivas.</p>
       </div>
 
       <div class="feature reveal">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
-        <h3>Construção Brasileira</h3>
-        <p>Aço carbono 3mm, parafusos zincados e usinagem de precisão. Fabricados no Brasil com peças que aguentam anos de uso intenso.</p>
+        <h3>343 Configurações</h3>
+        <p>3 cores de elastômero (preto, azul, vermelho) e mola opcional somam mais de 343 combinações de dureza. Configure cada pedal pra cada categoria.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>Damper Hidráulico</h3>
+        <p>Amortecedor hidráulico removível em cada pedal. Pega o feeling exato de um sistema de freio com fluido — sem a manutenção real.</p>
       </div>
 
       <div class="feature reveal">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
         </div>
-        <h3>Plug & Play Universal</h3>
-        <p>Compatível com PC (Windows), PlayStation 4/5 e Xbox Series. USB direto, reconhecimento automático em iRacing, Assetto, ACC, F1, Gran Turismo e Forza.</p>
+        <h3>Haptic Feedback</h3>
+        <p>Até 3 motores de haptic por pedal (HPM-L, HPM-R, PTT). Sinta ABS, travamento de roda e textura de zebra direto no pé via telemetria.</p>
       </div>
 
       <div class="feature reveal">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3>Garantia de 2 Anos</h3>
-        <p>Suporte técnico em português direto com a Kings Simuladores. Peças de reposição em estoque e atendimento por WhatsApp em horário comercial.</p>
+        <h3>Garantia Kings</h3>
+        <p>Distribuição oficial, nota fiscal, garantia de fábrica e suporte técnico em português direto com a Kings Simuladores via WhatsApp.</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="feature reveal">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-        </div>
-        <h3>Caixa Pronta para Cockpit</h3>
-        <p>Padrão de furação compatível com Sim-Lab, Trak Racer, Next Level e cockpits Kings. Suporte angular incluso para uso sem cockpit.</p>
+<!-- HAPTIC -->
+<section id="haptic" class="haptic-wrap">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Haptic Reactors</span>
+      <h2 class="section-title">3 motores. <span class="red">Infinitas sensações.</span></h2>
+      <p class="section-sub">O diferencial real do SP Pro: módulos de haptic feedback que traduzem a telemetria do simulador em vibração direta nos pés. Combine como quiser.</p>
+    </div>
+
+    <div class="haptic-grid">
+      <div class="haptic reveal">
+        <div class="haptic-code">HPM-L</div>
+        <div class="haptic-type">Linear Motor</div>
+        <h4>Feedback Linear</h4>
+        <p>Vibração suave e contínua baseada na dinâmica do carro: força de frenagem, perda de tração, mudança de aderência. O motor mais usado pra simular o ABS.</p>
+      </div>
+      <div class="haptic reveal">
+        <div class="haptic-code">HPM-R</div>
+        <div class="haptic-type">Rumble Motor</div>
+        <h4>Trepidação da Pista</h4>
+        <p>Reproduz a textura do asfalto, zebras, ondulações e o rugido do motor. É o som da pista chegando antes do seu cérebro processar.</p>
+      </div>
+      <div class="haptic reveal">
+        <div class="haptic-code">PTT</div>
+        <div class="haptic-type">Tactile Transducer</div>
+        <h4>Resposta Tátil Focada</h4>
+        <p>Transdutor que entrega vibrações concentradas e precisas direto no pedal. Ideal para sentir o momento exato do bloqueio das rodas.</p>
       </div>
     </div>
   </div>
@@ -890,82 +1174,44 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Especificações</span>
-      <h2 class="section-title">Compare a <span>linha completa</span></h2>
-      <p class="section-sub">Todos os modelos seguem o mesmo padrão de qualidade — escolha o nível de tecnologia ideal para o seu uso.</p>
+      <h2 class="section-title">Compare <span class="red">2-Set vs 3-Set</span></h2>
+      <p class="section-sub">A única diferença é a embreagem. Toda a tecnologia, materiais e qualidade são os mesmos.</p>
     </div>
 
     <div class="specs-table reveal">
       <div class="spec-row head">
         <div class="spec-cell lbl">Especificação</div>
-        <div class="spec-cell">Start</div>
-        <div class="spec-cell">Pro</div>
-        <div class="spec-cell">Elite</div>
+        <div class="spec-cell">SP Pro 2-Set</div>
+        <div class="spec-cell">SP Pro 3-Set</div>
       </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Pedais inclusos</div>
-        <div class="spec-cell">2 (Acel + Freio)</div>
-        <div class="spec-cell">3 (Acel + Freio + Embr)</div>
-        <div class="spec-cell">3 + módulo extra</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Tecnologia do freio</div>
-        <div class="spec-cell">Mola progressiva</div>
-        <div class="spec-cell">Load Cell 120kg</div>
-        <div class="spec-cell">Load Cell 150kg</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Sensor (Acel/Embr)</div>
-        <div class="spec-cell">Hall Sensor</div>
-        <div class="spec-cell">Hall Sensor</div>
-        <div class="spec-cell">Hall Sensor Premium</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Estrutura</div>
-        <div class="spec-cell">Aço 2mm</div>
-        <div class="spec-cell">Aço 3mm</div>
-        <div class="spec-cell">Aço 3mm + Alumínio</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Ajustes</div>
-        <div class="spec-cell">Curso</div>
-        <div class="spec-cell">Curso + dureza</div>
-        <div class="spec-cell">Curso + dureza + ângulo</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Software</div>
-        <div class="spec-cell">Plug & Play</div>
-        <div class="spec-cell">Plug & Play</div>
-        <div class="spec-cell">Simnet Tuning Suite</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Compatibilidade</div>
-        <div class="spec-cell">PC • PS</div>
-        <div class="spec-cell">PC • PS • Xbox</div>
-        <div class="spec-cell">PC • PS • Xbox</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-cell lbl">Garantia</div>
-        <div class="spec-cell">12 meses</div>
-        <div class="spec-cell">24 meses</div>
-        <div class="spec-cell">24 meses</div>
-      </div>
+      <div class="spec-row"><div class="spec-cell lbl">Pedais inclusos</div><div class="spec-cell">Acelerador + Freio</div><div class="spec-cell">Acelerador + Freio + Embreagem</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Load Cell</div><div class="spec-cell">100kg</div><div class="spec-cell">100kg</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Resolução</div><div class="spec-cell">12-bit</div><div class="spec-cell">12-bit</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Estrutura</div><div class="spec-cell">Aço inox 3mm</div><div class="spec-cell">Aço inox 3mm</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Acabamento</div><div class="spec-cell">Pintura eletrostática</div><div class="spec-cell">Pintura eletrostática</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Damper hidráulico</div><div class="spec-cell">2 unidades</div><div class="spec-cell">3 unidades</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Elastômeros</div><div class="spec-cell">3 cores incluídas</div><div class="spec-cell">3 cores incluídas</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Combinações</div><div class="spec-cell">343+</div><div class="spec-cell">343+</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Haptic Ready</div><div class="spec-cell">Sim (até 3 módulos)</div><div class="spec-cell">Sim (até 3 módulos)</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Compatibilidade</div><div class="spec-cell">PC + Fanatec</div><div class="spec-cell">PC + Fanatec</div></div>
+      <div class="spec-row"><div class="spec-cell lbl">Software</div><div class="spec-cell">SimConnect Manager</div><div class="spec-cell">SimConnect Manager</div></div>
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section id="depoimentos" class="testimonials-wrap">
+<!-- TESTIMONIALS -->
+<section class="testimonials-wrap">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Quem usa, recomenda</span>
-      <h2 class="section-title">A opinião de quem <span>pilota com Simnet</span></h2>
-      <p class="section-sub">Mais de 2.000 pedais entregues pela Kings Simuladores para pilotos de todo o Brasil.</p>
+      <span class="eyebrow">Quem pilota, aprova</span>
+      <h2 class="section-title">A opinião de quem <span class="red">já comprou na Kings</span></h2>
+      <p class="section-sub">Pilotos brasileiros que trocaram o pedal antigo pelo Simnet e não voltaram mais.</p>
     </div>
 
     <div class="testimonials">
       <div class="testimonial reveal">
         <div class="stars">★★★★★</div>
-        <p>Saí de um set com potenciômetro e a diferença para o load cell da Simnet é absurda. Comecei a frear melhor já na primeira sessão. Acabamento profissional e atendimento da Kings foi top.</p>
+        <p>Saí de um pedal com potenciômetro e o load cell do Simnet é outro nível. Comecei a ser consistente nas frenagens na primeira sessão. O atendimento da Kings foi top, chegou rapidinho.</p>
         <div class="who">
           <div class="avatar">R</div>
           <div class="who-info">
@@ -977,7 +1223,7 @@
 
       <div class="testimonial reveal">
         <div class="stars">★★★★★</div>
-        <p>Comparei com pedal importado e o Simnet Pro entrega 90% da experiência por menos da metade do preço. Estrutura robusta, ajustes fáceis e suporte em português. Vale cada centavo.</p>
+        <p>Comparei com pedal importado top de linha e o SP Pro 3-Set entrega quase a mesma coisa por bem menos. Estrutura sólida, ajustes fáceis e a galera da Kings tira qualquer dúvida no zap.</p>
         <div class="who">
           <div class="avatar">C</div>
           <div class="who-info">
@@ -989,7 +1235,7 @@
 
       <div class="testimonial reveal">
         <div class="stars">★★★★★</div>
-        <p>Uso o Elite em campeonatos online há 8 meses. Consistência de frenagem impressionante e o software de calibração ajuda demais. Já vendi o pedal antigo para um amigo.</p>
+        <p>Coloquei os 3 hapticos no kit completo e a sensação de ABS bate no pé igual carro real. Disputo campeonato online e a consistência mudou completamente. Vale cada real.</p>
         <div class="who">
           <div class="avatar">L</div>
           <div class="who-info">
@@ -1002,61 +1248,43 @@
   </div>
 </section>
 
-<!-- GALLERY -->
-<section>
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Em detalhes</span>
-      <h2 class="section-title">Cada parte <span>importa</span></h2>
-      <p class="section-sub">Da pedaleira ao parafuso, tudo pensado para entregar desempenho e durabilidade de uso intenso.</p>
-    </div>
-
-    <div class="gallery">
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">01</div><div class="gi-txt">Load Cell</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">02</div><div class="gi-txt">Base reforçada</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">03</div><div class="gi-txt">Pedaleiras CNC</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">04</div><div class="gi-txt">Conexão USB</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">05</div><div class="gi-txt">Molas progressivas</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">06</div><div class="gi-txt">Ajuste de curso</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">07</div><div class="gi-txt">Anodização</div></div></div>
-      <div class="gallery-item reveal"><div class="gi-label"><div class="gi-num">08</div><div class="gi-txt">Embalagem</div></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq" class="faq-wrap">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">FAQ</span>
-      <h2 class="section-title">Dúvidas <span>frequentes</span></h2>
-      <p class="section-sub">Antes de comprar, tire as principais dúvidas sobre os pedais Simnet.</p>
+      <h2 class="section-title">Dúvidas <span class="red">frequentes</span></h2>
+      <p class="section-sub">As perguntas que mais chegam pra gente no WhatsApp.</p>
     </div>
 
     <div class="faq reveal">
       <div class="faq-item">
-        <button class="faq-q">Os pedais Simnet funcionam em console (PS5 / Xbox)?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Sim. As linhas Pro e Elite são plug & play em PC (Windows), PlayStation 4/5 e Xbox Series. A linha Start é compatível com PC e PlayStation.</div></div>
+        <button class="faq-q">Os Simnet SP Pro funcionam em PS5 e Xbox?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim, via wheelbase Fanatec compatível. Em PC funcionam de forma nativa via USB direto. Para console, é necessário ter um volante Fanatec que faz a ponte de comunicação.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Preciso de cockpit para usar?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Não. Todos os modelos vêm com suporte angular que permite o uso direto no chão. Mas para tirar 100% do potencial do load cell, recomendamos um cockpit fixo ou base parafusada.</div></div>
+        <button class="faq-q">Qual a diferença entre o 2-Set e o 3-Set?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">O 3-Set inclui a embreagem com sensor de carga (essencial pra carros com câmbio H ou para H-shifter). Toda a tecnologia, load cell, material e qualidade do freio e acelerador é exatamente a mesma nas duas versões.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Funciona com iRacing, Assetto e F1?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Funciona com qualquer simulador que reconheça controle USB. Testado e calibrado em iRacing, Assetto Corsa, ACC, rFactor 2, Automobilista 2, F1 23/24, Gran Turismo 7 e Forza Motorsport.</div></div>
+        <button class="faq-q">Como funciona o haptic feedback?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Os módulos HPM-L, HPM-R e PTT recebem dados de telemetria do simulador (ABS, perda de tração, zebras, RPM) e geram vibrações específicas direto no pedal. Você pode usar um, dois ou os três módulos por pedal — totalmente customizável via SimConnect Manager.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Qual a diferença entre load cell e potenciômetro?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Pedal com potenciômetro mede o quanto você afundou o pedal. Já o load cell mede a pressão (força) aplicada — exatamente como funciona um freio de carro real. Isso traz consistência de frenagem volta após volta, mesmo com a perna cansada.</div></div>
+        <button class="faq-q">Preciso de cockpit pra usar?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não é obrigatório, mas é altamente recomendado por causa da pressão do load cell (até 100kg). Para uso fora de cockpit, a Baseplate em alumínio anodizado segura firme. O padrão de furação é compatível com Sim-Lab, Trak Racer, Next Level e cockpits Kings.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Como funciona a garantia?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">12 meses para a linha Start e 24 meses para Pro e Elite, contra defeitos de fabricação. Cobre componentes eletrônicos e estruturais. O suporte é feito direto pela Kings Simuladores via WhatsApp.</div></div>
+        <button class="faq-q">Tem nota fiscal e garantia?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. A Kings Simuladores é distribuidora oficial Simnet no Brasil. Toda venda sai com NF, garantia do fabricante e suporte técnico em português via WhatsApp.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Vocês entregam para todo o Brasil?<span class="plus">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Sim. Enviamos para todo o território nacional via transportadora e Correios, com nota fiscal e código de rastreio. Despacho em até 2 dias úteis após confirmação do pagamento.</div></div>
+        <button class="faq-q">Funciona em iRacing, Assetto Corsa e F1?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Funciona em qualquer simulador que reconheça controle USB. Testado e calibrado em iRacing, Assetto Corsa, ACC, rFactor 2, Automobilista 2, F1 23/24, Gran Turismo 7 e Forza Motorsport. O haptic precisa de plugin específico em alguns títulos — orientamos no pós-venda.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quais as formas de pagamento?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Pix com desconto, boleto à vista e cartão de crédito em até 12× sem juros (conforme valor do produto). Entrega para todo o Brasil via transportadora e Correios.</div></div>
       </div>
     </div>
   </div>
@@ -1065,14 +1293,14 @@
 <!-- CTA FINAL -->
 <section class="cta-final">
   <div class="cta-final-inner reveal">
-    <h2>Pronto para <span>pilotar de verdade?</span></h2>
-    <p>Garanta seu pedal Simnet direto com a Kings Simuladores — pagamento facilitado, garantia oficial e suporte em português.</p>
+    <h2>Pronto pra <span class="red">acelerar de verdade?</span></h2>
+    <p>Distribuição oficial Simnet no Brasil, pronta entrega, NF e suporte em português. A diferença está no pedal — e no atendimento.</p>
     <div class="cta-row" style="justify-content:center;">
       <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-        Comprar agora
+        Loja Kings Simuladores
       </a>
-      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20pedais%20Simnet." target="_blank" rel="noopener" class="btn btn-wpp">
+      <a href="https://wa.me/5511959018725?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20pedais%20Simnet." target="_blank" rel="noopener" class="btn btn-wpp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         Falar no WhatsApp
       </a>
@@ -1085,43 +1313,52 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo">KINGS <span>SIMNET</span></a>
-        <p>A linha oficial de pedais Simnet, distribuída com exclusividade pela Kings Simuladores — referência em equipamentos de sim racing no Brasil.</p>
+        <a href="#" class="logo">
+          <span class="logo-mark">S</span>
+          <span>SIMNET <span class="x">×</span> <span class="kings">KINGS</span></span>
+        </a>
+        <p>Distribuição oficial Simnet Racing no Brasil pela Kings Simuladores — referência em equipamentos de sim racing premium com pronta entrega, nota fiscal e suporte em português.</p>
       </div>
       <div class="footer-col">
         <h4>Produtos</h4>
         <ul>
-          <li><a href="#produtos">Simnet Start</a></li>
-          <li><a href="#produtos">Simnet Pro</a></li>
-          <li><a href="#produtos">Simnet Elite</a></li>
+          <li><a href="#produtos">SP Pro 2-Set</a></li>
+          <li><a href="#produtos">SP Pro 3-Set</a></li>
+          <li><a href="#produtos">Haptic Bundle</a></li>
+          <li><a href="#produtos">Baseplate</a></li>
+          <li><a href="#produtos">Acessórios</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Loja</h4>
+        <h4>Kings</h4>
         <ul>
-          <li><a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener">Site oficial</a></li>
+          <li><a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener">Loja oficial</a></li>
+          <li><a href="https://wa.me/5511959018725" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="#">Instagram</a></li>
-          <li><a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Suporte</h4>
         <ul>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#">Garantia</a></li>
-          <li><a href="#">Manual</a></li>
+          <li><a href="#specs">Especificações</a></li>
+          <li><a href="#">Manual SP Pro</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bot">
-      <span>© <span id="year"></span> Kings Simuladores • Todos os direitos reservados</span>
-      <span>Simnet™ • Distribuidor oficial</span>
+      <span>© <span id="year"></span> Kings Simuladores • Distribuidor oficial Simnet Racing</span>
+      <span class="br-mark">★ Produto representado no Brasil</span>
     </div>
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5511959018725?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20pedais%20Simnet." target="_blank" rel="noopener" class="float-wpp" aria-label="WhatsApp Kings Simuladores">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
 <script>
-  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q=>{
     q.addEventListener('click',()=>{
       const item=q.parentElement;
@@ -1131,13 +1368,11 @@
     });
   });
 
-  // Mobile menu
   const burger=document.getElementById('burger');
   const nav=document.getElementById('navLinks');
   burger.addEventListener('click',()=>nav.classList.toggle('open'));
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
-  // Reveal on scroll
   const io=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
@@ -1148,7 +1383,6 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Year
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 

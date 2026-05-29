@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Autenticidade - Você vai se moldar ao mundo ou vai fazer a diferença?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* --- RESET SIMPLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #02111d;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* --- CORES TEMA COPA BRASILEIRA --- */
+        :root {
+            --verde: #009b3a;
+            --amarelo: #ffdf00;
+            --azul:   #002776;
+            --branco: #ffffff;
+        }
+
+        /* --- LAYOUT GERAL --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--verde), var(--amarelo), var(--azul));
+            color: var(--branco);
+            padding: 24px 0;
+            border-bottom: 4px solid rgba(0,0,0,0.2);
+        }
+
+        header .logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header nav a {
+            color: var(--branco);
+            font-size: 14px;
+            margin-left: 16px;
+            opacity: 0.9;
+        }
+
+        header nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            background: radial-gradient(circle at top left, rgba(255,223,0,0.2), transparent 50%),
+                        radial-gradient(circle at top right, rgba(0,155,58,0.25), transparent 55%),
+                        radial-gradient(circle at bottom, rgba(0,39,118,0.3), transparent 60%);
+            padding: 60px 0 40px 0;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            max-width: 520px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.4);
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .hero-badge span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--amarelo);
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            background: var(--amarelo);
+            color: #1b1b1b;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.05);
+        }
+
+        .btn-outline {
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.6);
+            color: var(--branco);
+            padding: 11px 20px;
+            background: transparent;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0,0,0,0.25);
+        }
+
+        .hero-info {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-top: 16px;
+        }
+
+        .hero-card {
+            border-radius: 16px;
+            padding: 20px;
+            background: rgba(0,0,0,0.55);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .hero-card-text {
+            font-size: 13px;
+            opacity: 0.95;
+        }
+
+        .hero-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* --- SEÇÕES --- */
+        section {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        section:nth-of-type(even) {
+            background: rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--amarelo);
+            padding-left: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            opacity: 0.85;
+            max-width: 640px;
+            margin-bottom: 20px;
+        }
+
+        /* --- GRID "SOBRE" --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 32px;
+        }
+
+        .highlight-box {
+            border-radius: 12px;
+            padding: 16px 18px;
+            background: radial-gradient(circle at top left, rgba(255,223,0,0.2), rgba(0,0,0,0.7));
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 14px;
+        }
+
+        .highlight-box strong {
+            color: var(--amarelo);
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.35);
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--amarelo);
+        }
+
+        /* --- BLOCOS (RESUMO DA MINISTRAÇÃO) --- */
+        .blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .block-card {
+            background: rgba(0,0,0,0.55);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .block-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            margin-bottom: 4px;
+            color: var(--amarelo);
+        }
+
+        .block-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .block-time {
+            font-size: 12px;
+            opacity: 0.75;
+            margin-bottom: 8px;
+        }
+
+        /* --- VERSÍCULOS --- */
+        .verses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+        }
+
+        .verse-card {
+            border-radius: 12px;
+            padding: 14px;
+            background: linear-gradient(145deg, rgba(0,39,118,0.9), rgba(0,155,58,0.9));
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 13px;
+        }
+
+        .verse-ref {
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--amarelo);
+        }
+
+        /* --- PÚBLICO-ALVO --- */
+        .audience-list li::before {
+            color: var(--verde);
+        }
+
+        /* --- CTA FINAL --- */
+        .cta-final {
+            text-align: center;
+            padding: 50px 0 60px 0;
+        }
+
+        .cta-final h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .cta-final p {
+            font-size: 14px;
+            opacity: 0.9;
+            max-width: 540px;
+            margin: 0 auto 22px auto;
+        }
+
+        footer {
+            font-size: 12px;
+            text-align: center;
+            padding: 18px 0 26px 0;
+            opacity: 0.7;
+        }
+
+        /* --- RESPONSIVO --- */
+        @media (max-width: 800px) {
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOPO / MENU SIMPLES -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    MINISTRAÇÃO • AUTENTICIDADE
+                </div>
+                <div>
+                    [Sobre](#sobre)
+                    [Conteúdo](#conteudo)
+                    [Versículos](#versiculos)
+                    [Baixar roteiro](#cta)
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO / DESTAQUE -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <div class="hero-badge">
+                    <span></span>
+                    Palavra para juventude em ~15 minutos
+                </div>
+                <h1 class="hero-title">
+                    Autenticidade: você vai se moldar ao mundo ou vai fazer a diferença?
+                </h1>
+                
+                    Uma ministração curta, bíblica e impactante para confrontar a geração
+                    a respeito de identidade em Cristo, pressão do mundo e vida autêntica
+                    dentro e fora da igreja.
+                
+
+
+                <div class="hero-buttons">
+                    <!-- Ajuste o href para o link real do seu PDF -->
+                    [Baixar ministração em PDF](#)
+                    [Ver estrutura completa no altar](#conteudo)
+                </div>
+                
+                    Ideal para cultos de jovens, células, congressos e noites temáticas
+                    usando a ilustração das figurinhas da Copa do Mundo.
+                
+
+
+            </div>
+            <div>
+                <div class="hero-card">
+                    <div class="hero-card-title">
+                        Ilustração: a bandeira do México nas figurinhas da Copa
+                    </div>
+                    
+                        Todas as bandeiras foram adaptadas para o padrão novo, menos uma: o México.
+                        Eles decidiram: “Na nossa bandeira ninguém mexe”.
+                        A partir dessa imagem, a ministração chama os jovens
+                        a não deixarem o mundo mexer na “bandeira” da identidade em Cristo.
+                    
+
+
+                    <div class="hero-tag-list">
+                        <span class="tag">Figurinhas da Copa 2026</span>
+                        <span class="tag">Identidade em Cristo</span>
+                        <span class="tag">Juventude</span>
+                        <span class="tag">Romanos 12.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: SOBRE A MINISTRAÇÃO -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a ministração</h2>
+            
+                Palavra preparada para ser ministrada em aproximadamente
+                <strong>15 minutos</strong>, com linguagem simples, exemplos do dia a dia
+                e aplicação prática para adolescentes e jovens que vivem a pressão
+                de se encaixar no padrão do mundo.
+            
+
+
+
+            <div class="grid-2">
+                <div>
+                    <ul>
+                        <li>
+                            <strong>Tempo total:</strong> cerca de 15 minutos,
+                            dividido em blocos claros para você seguir no altar.
+                        </li>
+                        <li>
+                            <strong>Estilo:</strong> conversa direta, envolvente, com
+                            perguntas que fazem a galera participar e pensar.
+                        </li>
+                        <li>
+                            <strong>Clima:</strong> mais bate-papo de coração aberto do que
+                            palestra formal, perfeito para noites especiais de juventude.
+                        </li>
+                        <li>
+                            <strong>Foco principal:</strong> decidir se vamos nos
+                            moldar ao mundo ou viver de forma autêntica em Jesus.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="highlight-box">
+                        <strong>Mensagem central:</strong>
+
+
+                        Assim como o México decidiu não permitir mudanças em sua bandeira nas
+                        figurinhas da Copa, a geração de Jesus é chamada a não deixar o mundo
+                        distorcer sua identidade, valores e fé. A ministração ajuda os jovens a
+                        enxergarem onde têm se “adaptado” e os convida a assumir a bandeira de Cristo
+                        com coragem e autenticidade.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CONTEÚDO / BLOCOS -->
+    <section id="conteudo">
+        <div class="container">
+            <h2 class="section-title">O que você vai ministrar</h2>
+            
+                O roteiro está organizado em blocos simples para você seguir no altar.
+                Cada bloco tem um foco, um tempo sugerido e frases-chave para conduzir a palavra.
+            
+
+
+
+            <div class="blocks">
+                <div class="block-card">
+                    <div class="block-label">Bloco 1</div>
+                    <div class="block-title">Apresentação e conexão com a galera</div>
+                    <div class="block-time">~1 minuto</div>
+                    
+                        Abertura simples, clima de conversa, cumprimentando a juventude,
+                        apresentando o tema: <strong>autenticidade</strong> e a pergunta:
+                        “Você vai se moldar ao mundo ou vai fazer a diferença?”.
+                    
+
+
+                </div>
+
+                <div class="block-card">
+                    <div class="block-label">Bloco 2</div>
+                    <div class="block-title">Ilustração: figurinhas da Copa e bandeira do Méxi

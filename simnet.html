@@ -664,12 +664,65 @@
   /* Reveal animation */
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
   .reveal.visible{opacity:1;transform:translateY(0);}
+
+  /* === BANNER PROMO PIX === */
+  .promo-bar{
+    position:relative;z-index:101;
+    background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));
+    color:var(--black);
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    text-align:center;
+    padding:9px 16px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:13.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;
+    border-bottom:1px solid rgba(0,0,0,.22);
+  }
+  .promo-bar .pulse{
+    width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(232,0,45,.55);
+    animation:promoPulse 1.8s infinite;
+  }
+  .promo-bar .pix-ico{width:16px;height:16px;flex-shrink:0;}
+  .promo-bar .pix-pct{
+    background:var(--black);color:var(--gold2);
+    padding:2px 9px;border-radius:4px;font-weight:800;
+  }
+  @keyframes promoPulse{
+    0%{box-shadow:0 0 0 0 rgba(232,0,45,.55);}
+    70%{box-shadow:0 0 0 9px rgba(232,0,45,0);}
+    100%{box-shadow:0 0 0 0 rgba(232,0,45,0);}
+  }
+  @media(max-width:640px){
+    .promo-bar{font-size:11px;letter-spacing:.8px;padding:8px 10px;gap:7px;}
+    .promo-bar .pix-ico{display:none;}
+  }
+
+  /* Selo de desconto PIX nos produtos */
+  .pix-note{
+    display:flex;align-items:center;gap:8px;
+    margin:14px 0 2px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:12px;font-weight:700;letter-spacing:1px;
+    color:var(--muted2);text-transform:uppercase;
+  }
+  .pix-note .tag12{
+    background:var(--gold-soft);
+    border:1px solid rgba(201,168,76,.35);
+    color:var(--gold2);
+    padding:2px 9px;border-radius:5px;font-weight:800;letter-spacing:.5px;
+  }
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
+  <!-- BANNER PROMO PIX -->
+  <div class="promo-bar" role="note" aria-label="Promoção: 12% de desconto no PIX">
+    <span class="pulse" aria-hidden="true"></span>
+    <svg class="pix-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 9-9 9-9-9 9-9z"/></svg>
+    <span>Pague com <strong>PIX</strong> e ganhe <span class="pix-pct">12% OFF</span> à vista</span>
+  </div>
   <nav class="nav">
     <a href="#" class="logo">KINGS <span>SIMNET</span></a>
     <ul class="nav-links" id="navLinks">
@@ -774,6 +827,7 @@
             <li>Base em aço carbono dobrado</li>
             <li>Compatível PC e PlayStation</li>
           </ul>
+          <div class="pix-note"><span class="tag12">−12% PIX</span> Desconto à vista no PIX</div>
           <div class="product-cta">
             <span class="price-lbl">A partir de</span>
             <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>
@@ -794,6 +848,7 @@
             <li>Estrutura reforçada em aço 3mm</li>
             <li>Plug & Play • PC, PS5 e Xbox</li>
           </ul>
+          <div class="pix-note"><span class="tag12">−12% PIX</span> Desconto à vista no PIX</div>
           <div class="product-cta">
             <span class="price-lbl">Mais escolhido</span>
             <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>
@@ -814,6 +869,7 @@
             <li>Curva de resposta customizável</li>
             <li>Inclui maleta de transporte</li>
           </ul>
+          <div class="pix-note"><span class="tag12">−12% PIX</span> Desconto à vista no PIX</div>
           <div class="product-cta">
             <span class="price-lbl">Sob consulta</span>
             <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="btn-mini">Ver na loja</a>

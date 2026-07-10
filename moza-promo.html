@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promoção Moza Meio de Ano 2026 — Kings Simuladores</title>
+<meta name="description" content="Promoção Moza Meio de Ano na Kings Simuladores — válida de 16/06 a 15/07/2026. Bases Direct Drive, pedais, bundles e acessórios com preço especial: até 12x sem juros ou desconto à vista no PIX.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Promoção Moza Meio de Ano 2026 — Kings Simuladores">
+<meta property="og:description" content="14 produtos Moza com preço promocional. Até 12x sem juros ou desconto à vista no PIX. De 16/06 a 15/07/2026.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --dark:#111;
+    --card:#181818;
+    --card2:#1f1f1f;
+    --gold:#C9A84C;
+    --gold2:#F0CC6E;
+    --gold-soft:rgba(201,168,76,.12);
+    --white:#F5F5F0;
+    --muted:#888;
+    --muted2:#bbb;
+    --accent:#E8002D;
+    --green:#25c26e;
+    --border:#262626;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);color:var(--white);
+    font-family:'Barlow',sans-serif;font-weight:400;line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* === BANNER PROMO === */
+  .promo-bar{
+    position:relative;z-index:101;
+    background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));
+    color:var(--black);
+    display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+    text-align:center;padding:9px 16px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:13.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+    border-bottom:1px solid rgba(0,0,0,.22);
+  }
+  .promo-bar .pulse{
+    width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(232,0,45,.55);animation:promoPulse 1.8s infinite;
+  }
+  .promo-bar .sep{opacity:.45;}
+  @keyframes promoPulse{
+    0%{box-shadow:0 0 0 0 rgba(232,0,45,.55);}
+    70%{box-shadow:0 0 0 9px rgba(232,0,45,0);}
+    100%{box-shadow:0 0 0 0 rgba(232,0,45,0);}
+  }
+  @media(max-width:640px){.promo-bar{font-size:11px;letter-spacing:.6px;padding:8px 10px;gap:7px;}}
+
+  /* === HEADER === */
+  header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto;}
+  .logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--white);}
+  .logo span{color:var(--gold);}
+  .nav-cta{background:var(--gold);color:var(--black);padding:10px 20px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s;}
+  .nav-cta:hover{background:var(--gold2);transform:translateY(-1px);}
+
+  /* === HERO === */
+  .hero{position:relative;padding:70px 0 46px;background:radial-gradient(ellipse at top,#1a1308 0%,#0a0a0a 60%);overflow:hidden;text-align:center;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,168,76,.15) 0%,transparent 55%);pointer-events:none;}
+  .hero-in{position:relative;z-index:2;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid rgba(201,168,76,.3);padding:6px 16px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:22px;}
+  .eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,7vw,84px);line-height:.92;letter-spacing:2px;margin-bottom:16px;}
+  .hero h1 span{display:block;background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero p.lead{font-size:16px;color:#bbb;font-weight:300;max-width:620px;margin:0 auto 30px;}
+  .hero p.lead strong{color:var(--white);font-weight:600;}
+
+  /* countdown */
+  .countdown{display:inline-flex;gap:12px;margin-top:6px;}
+  .cd-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;min-width:74px;}
+  .cd-num{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:1;color:var(--gold2);}
+  .cd-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+  .cd-ended{color:var(--muted2);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-weight:700;}
+
+  /* === PRODUCTS === */
+  section#produtos{padding:56px 0 70px;}
+  .section-head{text-align:center;margin-bottom:40px;}
+  .section-head .eyebrow{margin-bottom:16px;}
+  .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,4.5vw,50px);letter-spacing:1.5px;}
+  .section-title span{color:var(--gold);}
+
+  .cat-group{margin-bottom:44px;}
+  .cat-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+  .cat-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;position:relative;overflow:hidden;}
+  .card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-3px);}
+  .card .code{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;}
+  .card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;line-height:1.2;margin:6px 0 16px;color:var(--white);}
+  .off-tag{position:absolute;top:0;right:0;background:var(--accent);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:1px;padding:5px 12px;border-bottom-left-radius:10px;}
+
+  .price{border-top:1px solid var(--border);padding-top:16px;margin-top:auto;}
+  .price .de{font-size:13px;color:var(--muted);}
+  .price .de s{color:var(--muted);}
+  .price .parcel{font-family:'Barlow',sans-serif;font-size:15px;color:var(--muted2);margin:2px 0 10px;}
+  .price .parcel b{color:var(--white);font-weight:700;}
+  .price .avista-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+  .price .avista{font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1;color:var(--gold2);letter-spacing:1px;}
+  .price .avista-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);}
+  .price .save{display:inline-block;margin-top:8px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--gold2);background:var(--gold-soft);border:1px solid rgba(201,168,76,.3);padding:2px 9px;border-radius:5px;}
+  .price .tbd{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);}
+
+  .card .buy{margin-top:16px;text-align:center;background:var(--gold);color:var(--black);padding:11px;border-radius:7px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:.2s;}
+  .card .buy:hover{background:var(--gold2);}
+
+  .fine{max-width:760px;margin:10px auto 0;padding:0 24px;text-align:center;font-size:12px;color:var(--muted);font-weight:300;}
+
+  footer{border-top:1px solid var(--border);padding:34px 0;text-align:center;color:var(--muted);font-size:13px;background:var(--dark);}
+  footer .logo{font-size:20px;margin-bottom:8px;display:inline-block;}
+</style>
+</head>
+<body>
+
+<!-- BANNER PROMO -->
+<div class="promo-bar" role="note" aria-label="Promoção Moza Meio de Ano">
+  <span class="pulse" aria-hidden="true"></span>
+  <span><strong>PROMOÇÃO MOZA MEIO DE ANO</strong></span>
+  <span class="sep">•</span>
+  <span>16/06 a 15/07/2026</span>
+  <span class="sep">•</span>
+  <span>Até 12x sem juros ou desconto à vista no PIX</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <nav class="nav">
+    <a href="#" class="logo">KINGS <span>MOZA</span></a>
+    <a href="https://www.kingssimuladores.com.br" target="_blank" rel="noopener" class="nav-cta">Ir para a loja</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-in">
+    <span class="eyebrow">Mid-Year Promotion 2026</span>
+    <h1>Linha Moza<span>com preço especial</span></h1>
+    <p class="lead">
+      14 produtos Moza selecionados com <strong>preço promocional</strong> — bases Direct Drive, pedais mBooster, bundles e acessórios.
+      Parcele o valor cheio em <strong>até 12x sem juros</strong> ou pague à vista no <strong>PIX</strong> pelo preço promocional.
+    </p>
+    <div class="countdown" id="countdown" aria-label="Tempo restante da promoção"></div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Ofertas válidas até 15/07</span>
+      <h2 class="section-title">Confira os <span>produtos em promoção</span></h2>
+    </div>
+    <div id="catalog"><!-- gerado via JS --></div>
+  </div>
+  <p class="fine">
+    Promoção válida de 16/06/2026 a 15/07/2026 ou enquanto durarem os estoques. Parcelamento em até 12x sem juros no cartão sobre o valor cheio (De).
+    Preço à vista exclusivo para pagamento no PIX. Imagens meramente ilustrativas.
+  </p>
+</section>
+
+<footer>
+  <div class="logo">KINGS <span style="color:var(--gold)">MOZA</span></div>
+  <div>Kings Simuladores — Distribuidor oficial Moza no Brasil</div>
+</footer>
+
+<script>
+/* =====================================================================
+   TABELA DE PREÇOS — PROMOÇÃO MOZA MEIO DE ANO 2026
+   ---------------------------------------------------------------------
+   Preencha os valores EM REAIS (R$) da planilha:
+     de     = valor cheio / MSRP Original (base do parcelamento 12x sem juros)
+     avista = preço à vista no PIX (valor da planilha / MSRP Promo em R$)
+   Enquanto "de" ou "avista" estiverem como null, o card mostra
+   "Preço sob consulta". Referência em USD do PDF ao lado de cada item.
+   ===================================================================== */
+  const CURRENCY = 'R$';
+  const PARCELAS = 12;
+
+  const CATS = ['Bundle','Base','Pedal','Acessório'];
+
+  const PRODUCTS = [
+    // Bundles
+    {code:'RS053', cat:'Bundle',    name:'MOZA R3 Racing Wheel and Pedals',        de:null, avista:null}, // USD 339 -> 319
+    {code:'RS074', cat:'Bundle',    name:'MOZA R3 Racing Wheel and Pedals (PC)',   de:null, avista:null}, // USD 279 -> 259
+    {code:'RS20',  cat:'Bundle',    name:'MOZA R5 Racing Simulator',               de:null, avista:null}, // USD 399 -> 379
+    {code:'RS071', cat:'Bundle',    name:'MOZA Truck Driving Simulator',           de:null, avista:null}, // USD 499 -> 469
+    // Bases
+    {code:'RS080', cat:'Base',      name:'MOZA R9 V3 Direct Drive Wheel Base',     de:null, avista:null}, // USD 329 -> 299
+    {code:'RS081', cat:'Base',      name:'MOZA R12 V2 Direct Drive Wheel Base',    de:null, avista:null}, // USD 429 -> 399
+    // Pedais
+    {code:'RS076', cat:'Pedal',     name:'MOZA mBooster Active Pedal',             de:null, avista:null}, // USD 799 -> 759
+    {code:'RS082', cat:'Pedal',     name:'MOZA mBooster Pedal Set',                de:null, avista:null}, // USD 999 -> 949
+    // Acessórios
+    {code:'RS046', cat:'Acessório', name:'MOZA 12-inch Wheel Mod for ES',          de:null, avista:null}, // USD 69 -> 59
+    {code:'RS083', cat:'Acessório', name:'MOZA mBooster Base Plate',               de:null, avista:null}, // USD 129 -> 119
+    {code:'RS078', cat:'Acessório', name:'MOZA mBooster Base Extension Plate',     de:null, avista:null}, // USD 39 -> 35
+    {code:'AS012', cat:'Acessório', name:'MOZA MFY Yoke',                          de:null, avista:null}, // USD 149 -> 129
+    {code:'AS008', cat:'Acessório', name:'MOZA MTP Throttle Panel',                de:null, avista:null}, // USD 329 -> 299
+    {code:'AS004', cat:'Acessório', name:'MOZA Flight Base Table Clamp',           de:null, avista:null}, // USD 59 -> 49
+  ];
+
+  const STORE_URL = 'https://www.kingssimuladores.com.br';
+
+  const brl = n => CURRENCY + ' ' + Number(n).toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+
+  function cardHTML(p){
+    const hasPrice = (p.de != null && p.avista != null);
+    let priceBlock;
+    let offTag = '';
+    if(hasPrice){
+      const parcela = p.de / PARCELAS;
+      const save = p.de - p.avista;
+      const pct = Math.round((save / p.de) * 100);
+      if(pct > 0) offTag = `<span class="off-tag">-${pct}%</span>`;
+      priceBlock = `
+        <div class="price">
+          <div class="de">De <s>${brl(p.de)}</s></div>
+          <div class="parcel">${PARCELAS}x de <b>${brl(parcela)}</b> sem juros</div>
+          <div class="avista-row">
+            <span class="avista">${brl(p.avista)}</span>
+            <span class="avista-lbl">à vista no PIX</span>
+          </div>
+          ${save > 0 ? `<span class="save">Economize ${brl(save)}</span>` : ''}
+        </div>`;
+    } else {
+      priceBlock = `
+        <div class="price">
+          <div class="tbd">Preço sob consulta</div>
+        </div>`;
+    }
+    return `
+      <div class="card">
+        ${offTag}
+        <div class="code">${p.code}</div>
+        <h3>${p.name}</h3>
+        ${priceBlock}
+        <a class="buy" href="${STORE_URL}" target="_blank" rel="noopener">Comprar na loja</a>
+      </div>`;
+  }
+
+  function render(){
+    const root = document.getElementById('catalog');
+    root.innerHTML = CATS.map(cat => {
+      const items = PRODUCTS.filter(p => p.cat === cat);
+      if(!items.length) return '';
+      return `
+        <div class="cat-group">
+          <div class="cat-label">${cat}${items.length > 1 ? 's' : ''}</div>
+          <div class="grid">${items.map(cardHTML).join('')}</div>
+        </div>`;
+    }).join('');
+  }
+  render();
+
+  /* Contagem regressiva até o fim da promoção (15/07/2026 23:59:59) */
+  const END = new Date('2026-07-15T23:59:59-03:00').getTime();
+  const cd = document.getElementById('countdown');
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    const diff = END - Date.now();
+    if(diff <= 0){
+      cd.innerHTML = '<span class="cd-ended">Promoção encerrada</span>';
+      clearInterval(timer);
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor(diff % 86400000 / 3600000);
+    const m = Math.floor(diff % 3600000 / 60000);
+    const s = Math.floor(diff % 60000 / 1000);
+    cd.innerHTML =
+      `<div class="cd-box"><div class="cd-num">${pad(d)}</div><div class="cd-lbl">Dias</div></div>`+
+      `<div class="cd-box"><div class="cd-num">${pad(h)}</div><div class="cd-lbl">Horas</div></div>`+
+      `<div class="cd-box"><div class="cd-num">${pad(m)}</div><div class="cd-lbl">Min</div></div>`+
+      `<div class="cd-box"><div class="cd-num">${pad(s)}</div><div class="cd-lbl">Seg</div></div>`;
+  }
+  tick();
+  const timer = setInterval(tick, 1000);
+</script>
+</body>
+</html>
